@@ -33,6 +33,11 @@ cache_t cache[] = {
     { 0, TAG_EMS_POWER_WB_ALL, "e3dc/wb/all", "%i", "", RSCP::eTypeUInt32, 1, false },
     { 0, TAG_EMS_POWER_WB_SOLAR, "e3dc/wb/solar", "%i", "", RSCP::eTypeUInt32, 1, false },
     { 0, TAG_INFO_TIME_ZONE, "e3dc/time/zone", "%s", "", RSCP::eTypeString, 1, false },
+    { 0, TAG_EP_IS_READY_FOR_SWITCH, "e3dc/ep/isreadyforswitch", "%i", "", RSCP::eTypeUInt32, 1, false },
+    { 0, TAG_EP_IS_GRID_CONNECTED, "e3dc/ep/isgridconnected", "%i", "", RSCP::eTypeUInt32, 1, false },
+    { 0, TAG_EP_IS_ISLAND_GRID, "e3dc/ep/isislandgrid", "%i", "", RSCP::eTypeUInt32, 1, false },
+    { 0, TAG_EP_IS_INVALID_STATE, "e3dc/ep/isinvalidstate", "%i", "", RSCP::eTypeUInt32, 1, false },
+    { 0, TAG_EP_IS_POSSIBLE, "e3dc/ep/ispossible", "%i", "", RSCP::eTypeUInt32, 1, false },
     // CONTAINER TAG_BAT_DATA --------------------------------------------------------------------
     { 0, TAG_BAT_RSOC, "e3dc/battery/rsoc", "%0.1f", "", RSCP::eTypeFloat32, 1, false },
     { 0, TAG_BAT_MODULE_VOLTAGE, "e3dc/battery/voltage", "%0.1f", "", RSCP::eTypeFloat32, 1, false },
@@ -40,13 +45,7 @@ cache_t cache[] = {
     { 0, TAG_BAT_CHARGE_CYCLES, "e3dc/battery/cycles", "%i", "", RSCP::eTypeUInt32, 1, false },
     { 0, TAG_BAT_STATUS_CODE, "e3dc/battery/status", "%i", "", RSCP::eTypeUInt32, 1, false },
     { 0, TAG_BAT_ERROR_CODE, "e3dc/battery/error", "%i", "", RSCP::eTypeUInt32, 1, false },
-    { 0, TAG_BAT_TRAINING_MODE, "e3dc/battery/trainingmode", "%i", "", RSCP::eTypeUInt32, 1, false },
-    //container emergency power status -----------------------------------------------------------
-    { 0, TAG_EP_IS_READY_FOR_SWITCH, "e3dc/ep/isreadyforswitch", "%i", "", RSCP::eTypeUInt32, 1, false },
-    { 0, TAG_EP_IS_GRID_CONNECTED, "e3dc/ep/isgridconnected", "%i", "", RSCP::eTypeUInt32, 1, false },
-    { 0, TAG_EP_IS_ISLAND_GRID, "e3dc/ep/isislandgrid", "%i", "", RSCP::eTypeUInt32, 1, false },
-    { 0, TAG_EP_IS_INVALID_STATE, "e3dc/ep/isinvalidstate", "%i", "", RSCP::eTypeUInt32, 1, false },
-    { 0, TAG_EP_IS_POSSIBLE, "e3dc/ep/ispossible", "%i", "", RSCP::eTypeUInt32, 1, false },
+    { 0, TAG_BAT_TRAINING_MODE, "e3dc/battery/trainingmode", "%i", "", RSCP::eTypeUInt32, 1, false },   
     // CONTAINER TAG_DB_HISTORY_DATA_DAY ---------------------------------------------------------
     // CONTAINER TAG_DB_SUM_CONTAINER ------------------------------------------------------------
     // today
