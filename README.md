@@ -35,9 +35,19 @@ Additional topics:
 - e3dc/battery/soc
 - e3dc/battery/status
 - e3dc/battery/voltage
+- e3dc/battery/trainingmode (training mode active)
 - e3dc/consumed
 - e3dc/coupling/mode
 - e3dc/time/zone
+- e3dc/mode
+- e3dc/status *
+- e3dc/emergencypowerstatus **
+- e3dc/ep/isreadyforswitch
+- e3dc/ep/isgridconnected
+- e3dc/ep/isislandgrid
+- e3dc/ep/isinvalidstate
+- e3dc/ep/ispossible
+
 
 Only modified values will be published.
 
@@ -54,6 +64,24 @@ At midnight, a summary of the previous day's values is sent out:
 - e3dc/yesterday/pm_0/energy
 - e3dc/yesterday/pm_1/energy
 - e3dc/yesterday/solar/energy
+
+
+
+* Status is a binary coded information:
+Bit 0 (1) : Loading of batterie blocked
+Bit 1 (2) : Unloading of batterie blocked
+Bit 2 (4) : emergency power available (batterie loaded)
+Bit 3 (8) : wetherbased loading active: loading is throttled
+Bit 4 (16): The output power of the energy storage system is regulated
+Bit 5 (32): Load lock time enabled
+Bit 6 (64): Unload lock time enabled
+
+** emergencypowerstatus is an integer:
+0: emergency power not supported
+1: emergency power active
+2: emergency power not active
+3: emergency power not available
+4: motor switch is not activated
 
 ## Prerequisite
 
