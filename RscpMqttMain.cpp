@@ -153,6 +153,16 @@ int createRequest(SRscpFrameBuffer * frameBuffer) {
         protocol.appendValue(&rootValue, TAG_EMS_REQ_POWER_GRID);
         protocol.appendValue(&rootValue, TAG_EMS_REQ_POWER_ADD);
         protocol.appendValue(&rootValue, TAG_EMS_REQ_COUPLING_MODE);
+        protocol.appendValue(&rootValue, TAG_EMS_REQ_MODE);
+        protocol.appendValue(&rootValue, TAG_EMS_REQ_POWER_WB_ALL);
+        protocol.appendValue(&rootValue, TAG_EMS_REQ_POWER_WB_SOLAR);
+        protocol.appendValue(&rootValue, TAG_EMS_REQ_STATUS);
+        protocol.appendValue(&rootValue, TAG_EMS_REQ_EMERGENCY_POWER_STATUS);
+        protocol.appendValue(&rootValue, TAG_EP_REQ_IS_READY_FOR_SWITCH);
+        protocol.appendValue(&rootValue, TAG_EP_REQ_IS_GRID_CONNECTED);
+        protocol.appendValue(&rootValue, TAG_EP_REQ_IS_ISLAND_GRID);
+        protocol.appendValue(&rootValue, TAG_EP_REQ_IS_INVALID_STATE);
+        protocol.appendValue(&rootValue, TAG_EP_REQ_IS_POSSIBLE);
 
         // request e3dc timestamp
         protocol.appendValue(&rootValue, TAG_INFO_REQ_TIME);
@@ -168,6 +178,8 @@ int createRequest(SRscpFrameBuffer * frameBuffer) {
         protocol.appendValue(&batteryContainer, TAG_BAT_REQ_CHARGE_CYCLES);
         protocol.appendValue(&batteryContainer, TAG_BAT_REQ_STATUS_CODE);
         protocol.appendValue(&batteryContainer, TAG_BAT_REQ_ERROR_CODE);
+        protocol.appendValue(&batteryContainer, TAG_BAT_REQ_TRAINING_MODE);
+	    
         // append sub-container to root container
         protocol.appendValue(&rootValue, batteryContainer);
         // free memory of sub-container as it is now copied to rootValue
