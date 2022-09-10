@@ -66,22 +66,21 @@ At midnight, a summary of the previous day's values is sent out:
 - e3dc/yesterday/solar/energy
 
 
+\* status is a binary coded information:  
+ Bit 0 (1) : Loading of batterie blocked  
+ Bit 1 (2) : Unloading of batterie blocked  
+ Bit 2 (4) : emergency power available (batterie loaded)  
+ Bit 3 (8) : wetherbased loading active: loading is throttled  
+ Bit 4 (16): The output power of the energy storage system is regulated  
+ Bit 5 (32): Load lock time enabled  
+ Bit 6 (64): Unload lock time enabled  
 
-* Status is a binary coded information:
-Bit 0 (1) : Loading of batterie blocked
-Bit 1 (2) : Unloading of batterie blocked
-Bit 2 (4) : emergency power available (batterie loaded)
-Bit 3 (8) : wetherbased loading active: loading is throttled
-Bit 4 (16): The output power of the energy storage system is regulated
-Bit 5 (32): Load lock time enabled
-Bit 6 (64): Unload lock time enabled
-
-** emergencypowerstatus is an integer:
-0: emergency power not supported
-1: emergency power active
-2: emergency power not active
-3: emergency power not available
-4: motor switch is not activated
+** emergencypowerstatus is an integer:  
+ 0: emergency power not supported  
+ 1: emergency power active  
+ 2: emergency power not active  
+ 3: emergency power not available  
+ 4: motor switch is not activated  
 
 ## Prerequisite
 
